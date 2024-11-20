@@ -27,13 +27,13 @@ Considerations:
 
 ### Features
 
-As a user, I want a straighforward and personal experience to see how I can plate the food I made.
-As a user, I want to have a easy way to learn how to plate the food I cooked.
-As a user, I want to have a simple way to give me ideas on plating the food I already made.
-As a user, I want a quick way to have a custom idea of plating for my food.
-As a user, I want to see what other people are trying to plate.
-As a user, I want to see other plating designs for food I haven't made.
-As a user, I want to see what others used (in terms of food) to create their plating designs.
+- As a user, I want a straighforward and personal experience to see how I can plate the food I made.
+- As a user, I want to have a easy way to learn how to plate the food I cooked.
+- As a user, I want to have a simple way to give me ideas on plating the food I already made.
+- As a user, I want a quick way to have a custom idea of plating for my food.
+- As a user, I want to see what other people are trying to plate.
+- As a user, I want to see other plating designs for food I haven't made.
+- As a user, I want to see what others used (in terms of food) to create their plating designs.
 
 Home Page:
 - Welcome message and introduction to the app.
