@@ -128,41 +128,41 @@ Response:
 ## Roadmap
 
 1. Create Client (React)
-React project with routes and boilerplate pages
-Set up the React app using Create React App.
-Implement basic routing for Home, Input Form, Gallery, and Single Image pages using React Router.
+- React project with routes and boilerplate pages
+- Set up the React app using Create React App.
+- Implement basic routing for Home, Input Form, Gallery, and Single Image pages using React Router.
 2. Create Server (Express)
-Set up Express server
-Create an Express project to handle API requests (GET, POST, etc.).
-Implement basic routes with placeholder 200 responses for /images, /images/:id, etc.
+- Set up Express server
+- Create an Express project to handle API requests (GET, POST, etc.).
+- Implement basic routes with placeholder 200 responses for /images, /images/:id, etc.
 3. Create Database Schema (mySQL)
-Set up mySQL and database schema
-Define the schema for storing images and metadata (ingredients, garnishes, sauces, plate style, plating style).
-Create tables with appropriate relationships.
+- Set up mySQL and database schema
+- Define the schema for storing images and metadata (ingredients, garnishes, sauces, plate style, plating style).
+- Create tables with appropriate relationships.
 4. Create Migrations
-Create database migrations for mySQL
-Write migration files to set up the database structure with the images table.
+- Create database migrations for mySQL
+- Write migration files to set up the database structure with the images table.
 5. Create Mock Data and Seeds
-Create seeds with mock data
-Seed the database with some sample images and metadata to test the gallery functionality.
+- Create seeds with mock data
+- Seed the database with some sample images and metadata to test the gallery functionality.
 6. Implement Image Generation with DALL·E API
-Create POST /images endpoint
-Accept user input (ingredients, garnishes, sauces, plate style, plating style) and generate an image using the DALL·E API.
-Store the generated image and metadata in the database.
+- Create POST /images endpoint
+- Accept user input (ingredients, garnishes, sauces, plate style, plating style) and generate an image using the DALL·E API.
+- Store the generated image and metadata in the database.
 7. Fetch and Display Images
-Build and style gallery page
-Fetch the list of generated images from the /images endpoint.
-Display the images in a grid or gallery layout with their metadata.
-Add infinite scroll if necessary.
+- Build and style gallery page
+- Fetch the list of generated images from the /images endpoint.
+- Display the images in a grid or gallery layout with their metadata.
+- Add infinite scroll if necessary.
 8. Single Image Page
-Build and style single image page
-Create a page to display a single image and its metadata when clicked from the gallery.
-Fetch the image data from /images/:id based on the image ID.
+- Build and style single image page
+- Create a page to display a single image and its metadata when clicked from the gallery.
+- Fetch the image data from /images/:id based on the image ID.
 9. Add Environment Variables
-Add environment variables for OpenAI API and database credentials
-Securely store OpenAI API key and mySQL database credentials in .env files.
+- Add environment variables for OpenAI API and database credentials
+- Securely store OpenAI API key and mySQL database credentials in .env files.
 10. Style Pages
-Style the pages using SASS.
+- Style the pages using SASS.
 
 
 ---
