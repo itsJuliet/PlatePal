@@ -84,7 +84,16 @@ Single Image Page: Displays one design and the meta data for user inputs.
 
 ### Mockups
 
-Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
+Homepage:
+ ![](proposal_assets/homepage.png)
+Input Form Page:
+ ![](proposal_assets/imageformpage.png)
+ Generated Image Page:
+  ![](proposal_assets/generatedimagepage.png)
+Gallery Page:
+ ![](proposal_assets/gallerypage.png)
+Single Image Page:
+ ![](proposal_assets/singleimagepage.png)
 
 ### Data
 
