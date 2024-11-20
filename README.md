@@ -60,15 +60,16 @@ Single Image Page:
 
 ### Tech Stack
 
-Front End: React, React Router, Axios, SASS.
-Back End: Node.js, Express.js, Knex.
-Database: mySQL or PostgreSQL for storing images and metadata (depends on using Render).
+- Front End: React, React Router, Axios, SASS.
+- Back End: Node.js, Express.js, Knex.
+- Database: mySQL for storing images and metadata.
 
 (Not a part of MVP)
+
 Deployment:
-Front End: Netlify.
-Back End: Render.
-Environment Management: dotenv for secure API keys.
+- Front End: Netlify.
+- Back End: Render.
+- Environment Management: dotenv for secure API keys.
 
 ### APIs
 
@@ -76,11 +77,11 @@ OpenAI DALL·E: Used to generate images based on user input.
 
 ### Sitemap
 
-Home Page: Introduction and navigation.
-Input Form Page: User inputs meal details.
-Generated Image Page: Displays AI-generated design.
-Gallery Page: Displays all generated designs.
-Single Image Page: Displays one design and the meta data for user inputs.
+- Home Page: Introduction and navigation.
+- Input Form Page: User inputs meal details.
+- Generated Image Page: Displays AI-generated design.
+- Gallery Page: Displays all generated designs.
+- Single Image Page: Displays one design and the meta data for user inputs.
 
 ### Mockups
 
