@@ -162,8 +162,7 @@ Response:
 9. Add Environment Variables
 - Add environment variables for OpenAI API and database credentials
 - Securely store OpenAI API key and mySQL database credentials in .env files.
-10. Style Pages
-- Style the pages using SASS.
+
 
 
 ---
