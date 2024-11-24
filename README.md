@@ -86,19 +86,19 @@ OpenAI DALL·E: Used to generate images based on user input.
 ### Mockups
 
 Homepage:
- ![](proposal_assets/homepage.png)
+ ![](public/homepage.png)
 Input Form Page:
- ![](proposal_assets/imageformpage.png)
+ ![](public/imageformpage.png)
  Generated Image Page:
-  ![](proposal_assets/generatedimagepage.png)
+  ![](public/generatedimagepage.png)
 Gallery Page:
- ![](proposal_assets/gallerypage.png)
+ ![](public/gallerypage.png)
 Single Image Page:
- ![](proposal_assets/singleimagepage.png)
+ ![](public/singleimagepage.png)
 
 ### Data
 
-![data table](proposal_assets/datatable.png)
+![data table](public/datatable.png)
 
 ### Endpoints
 
@@ -106,23 +106,23 @@ POST/images
  - post the generated image from API
 
 Input:
- ![](proposal_assets/postinput.png)
+ ![](public/postinput.png)
 
  Response: 
-![](proposal_assets/postresponse.png)
+![](public/postresponse.png)
 
 GET/images
 - getch a list of all generated images with their metadata
 
 Reponse:
-![](proposal_assets/getimages.png)
+![](public/getimages.png)
 
 GET/images/:id
 - fetch details of a specific image (by its id)
 along with its metadata.
 
 Response:
-![](proposal_assets/getimagebyid.png)
+![](public/getimagebyid.png)
 
 
 
