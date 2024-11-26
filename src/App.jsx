@@ -1,10 +1,11 @@
-import './App.scss'
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
 import ImageFormPage from './pages/ImageFormPage/ImageFormPage';
 import GalleryPage from './pages/GalleryPage/GalleryPage';
 import SingleImagePage from './pages/SingleImagePage/SingleImagePage';
 import Header from './components/Header/Header';
+import './App.scss'
 
 
 function App() {

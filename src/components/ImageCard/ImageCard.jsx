@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function ImageCard() {
+function ImageCard({ plating }) {
   return (
-    <div>ImageCard</div>
-  )
+    <div className="image-card">
+      <img src={plating.image_url} alt={`Plating ${plating.id}`} />
+      <h3>Plating {plating.id}</h3>
+    </div>
+  );
 }
 
-export default ImageCard
+export default ImageCard;

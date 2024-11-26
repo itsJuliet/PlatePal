@@ -1,8 +1,9 @@
 import React from 'react'
+import ImageForm from '../../components/ImageForm/ImageForm'
 
 function ImageFormPage() {
   return (
-    <div>ImageFormPage</div>
+    <div><ImageForm/></div>
   )
 }
 
