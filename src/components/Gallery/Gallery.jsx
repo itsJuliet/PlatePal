@@ -27,7 +27,10 @@ function Gallery() {
       <h1>Gallery</h1>
       {platings.map((plating) => (
         <div key={plating.id}>
-          <img src={plating.image_url} alt={`Plating ${plating.id}`} />
+          <img
+            src={`${process.env.REACT_APP_API_URL}${plating.image_url}`}
+            alt={`Plating ${plating.id}`}
+          />
           <p>{plating.ingredients}</p>
         </div>
       ))}
