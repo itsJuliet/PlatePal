@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createPlating } from '../../api';
+import { createPlating } from '../../api'; 
 
-function ImageForm() {
+function ImageFormPage() {
   const [ingredients, setIngredients] = useState('');
   const [garnishes, setGarnishes] = useState('');
   const [sauces, setSauces] = useState('');
   const [plateStyle, setPlateStyle] = useState('');
   const [platingStyle, setPlatingStyle] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const validateForm = () => {
+    return ingredients && garnishes && sauces && plateStyle && platingStyle;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;  
+
     const newPlating = {
       ingredients,
       garnishes,
@@ -19,9 +26,16 @@ function ImageForm() {
       plate_style: plateStyle,
       plating_style: platingStyle,
     };
-    const plating = await createPlating(newPlating);
-    if (plating) {
-      navigate(`/gallery/${plating.id}`);
+
+    setLoading(true);
+
+    try {
+      const plating = await createPlating(newPlating); 
+      navigate(`/add/${plating.id}`);  
+    } catch (err) {
+      console.error('Error creating plating:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -59,10 +73,12 @@ function ImageForm() {
           value={platingStyle}
           onChange={(e) => setPlatingStyle(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={loading}>
+          {loading ? 'Creating...' : 'Submit'}
+        </button>
       </form>
     </div>
   );
 }
 
-export default ImageForm;
+export default ImageFormPage;

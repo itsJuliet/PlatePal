@@ -23,11 +23,17 @@ export const fetchPlatingById = async (id) => {
 };
 
 export const createPlating = async (data) => {
-  try {
-    const response = await axios.post(`${API_URL}/api/platings/gallery`, data);
-    return response.data.plating; 
-  } catch (error) {
-    console.error('Error creating plating:', error);
-    throw error;
-  }
-};
+    try {
+      const response = await axios.post(`${API_URL}/api/platings/gallery`, data);
+      return response.data.plating; 
+    } catch (error) {
+      console.error('Error creating plating:', error);
+      if (error.response) {
+        throw new Error(error.response.data.error || 'Server error occurred while creating plating');
+      } else if (error.request) {
+        throw new Error('No response from the server. Please check your internet connection.');
+      } else {
+        throw new Error('An unexpected error occurred while making the request.');
+      }
+    }
+  };
