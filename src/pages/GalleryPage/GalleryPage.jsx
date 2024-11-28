@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchPlatings } from '../../api';
 import { Link, useLocation } from 'react-router-dom';
 import ImageCard from '../../components/ImageCard/ImageCard';
+import './GalleryPage.scss'
 
 function GalleryPage() {
   const [platings, setPlatings] = useState([]);
@@ -20,8 +21,8 @@ function GalleryPage() {
 
   return (
     <div>
-      <h1>Gallery</h1>
-      <div className="gallery-container">
+      <h1 className='gallery__header'>Gallery</h1>
+      <div className="gallery__image-container">
         {platings.length === 0 ? (
           <p>No images saved to the gallery yet.</p>
         ) : (

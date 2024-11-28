@@ -1,0 +1,19 @@
+@use "../../styles/partials/_globals.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+.gallery {
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        margin: 2rem;
+    }
+
+    &__image-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem;
+    }
+}
+
