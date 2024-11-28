@@ -15,7 +15,7 @@ function ImageForm() {
   
     const validateField = (name, value) => {
       if (!value.trim()) {
-        return `${name} is required`;
+        return `${name} is required. Input "none" if not available.`;
       }
       return '';
     };
@@ -63,60 +63,65 @@ function ImageForm() {
     };
   
     return (
-      <div>
-        <h1>Create a Plate</h1>
+      <div className='form__container'>
+        <h1 className='form__header'>Create a Plate</h1>
         <form onSubmit={handleSubmit} noValidate>
-          <div>
-            <label>Ingredients</label>
+          <div className='form__input-container'>
+            <label className='form__label'>Ingredients</label>
             <input
               type="text"
               placeholder="Ingredients"
               value={ingredients}
               onChange={(e) => setIngredients(e.target.value)}
+              className='form__input'
             />
             {errors.ingredients && <p className="error">{errors.ingredients}</p>}
           </div>
   
-          <div>
-            <label>Garnishes</label>
+          <div className='form__input-container'>
+            <label className='form__label'>Garnishes</label>
             <input
               type="text"
               placeholder="Garnishes"
               value={garnishes}
               onChange={(e) => setGarnishes(e.target.value)}
+              className='form__input'
             />
             {errors.garnishes && <p className="error">{errors.garnishes}</p>}
           </div>
   
-          <div>
-            <label>Sauces</label>
+          <div className='form__input-container'>
+            <label className='form__label'>Sauces</label>
             <input
               type="text"
               placeholder="Sauces"
               value={sauces}
               onChange={(e) => setSauces(e.target.value)}
+              className='form__input'
             />
             {errors.sauces && <p className="error">{errors.sauces}</p>}
           </div>
   
-          <div>
-            <label>Plate Style</label>
+          <div className='form__input-container'>
+            <label className='form__label'>Plate Style</label>
             <input
               type="text"
               placeholder="Plate Style"
               value={plateStyle}
               onChange={(e) => setPlateStyle(e.target.value)}
+              className='form__input'
             />
             {errors.plateStyle && <p className="error">{errors.plateStyle}</p>}
           </div>
   
-          <div>
-            <label>Plating Style</label>
+          <div className='form__input-container'>
+            <label className='form__label'>Plating Style</label>
             <input
               type="text"
               placeholder="Plating Style"
               value={platingStyle}
               onChange={(e) => setPlatingStyle(e.target.value)}
+              className='form__input'
             />
             {errors.platingStyle && (
               <p className="error">{errors.platingStyle}</p>
