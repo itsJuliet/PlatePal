@@ -1,0 +1,67 @@
+@use "../../styles/partials/_globals.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+.homepage {
+    background-image: url('../../assets/images/platepalhomepage.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+
+    &__container {
+        position: absolute;
+        right: 14rem;
+        top: 19rem;
+        max-width: 28rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: $color-dark-blue;
+        
+    }
+
+    &__subtext {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+       
+
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center; 
+        text-decoration: none;
+        font-size: 1rem;
+        padding: .7rem;
+        background-color: $color-clear;
+        border-radius: .3125rem;
+        border: 1px solid $color-dark-blue;
+        color: $color-black;
+        text-transform: uppercase;
+        gap: 0.5rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+            background-color: $color-gray-blue
+        }
+    }
+
+    &__link-icon {
+        align-items: center;
+        width: 25px;
+        height: 25px;
+    }
+}

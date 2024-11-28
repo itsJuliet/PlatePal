@@ -5,7 +5,7 @@
 .header {
     background-color: $color-clear;
     padding: 1rem;
-    color: black;
+    color: $color-black;
     font-family: $font-family;
 
     &__nav {
@@ -36,7 +36,8 @@
         transition: color 0.3s ease;
 
         &:hover {
-            color: $color-gray; 
+            color: $color-gray-blue; 
+            border-bottom: 2px solid $color-gray-blue; 
         }
 
         &:active {

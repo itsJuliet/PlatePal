@@ -1,12 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './HomePage.scss'
+import ArrowIcon from '../../assets/icons/right-arrow.svg'
 
 function HomePage() {
   return (
-    <div>
-      <h1>Welcome to PlatePal!</h1>
-      <Link to="/gallery">Go to Gallery</Link> <br />
-      <Link to="/add">Create Plate</Link>
+    <div className='homepage'>
+        <div className='homepage__container'>
+            <h1 className='homepage__header'>Your Personalized Plating Designer, Powered by AI</h1>
+            <p className='homepage__subtext'>Elevate your meals with stunning, custom AI-generated plating designs—making every dish look just as amazing as it tastes.</p>
+            <div className='homepage_button'>
+            <Link to="/add" className='homepage__link'>Create plate design now
+            <img
+                src={ArrowIcon}
+                alt="Arrow Icon"
+                className="homepage__link-icon"
+              />
+            </Link>
+            </div>
+        </div>
     </div>
   );
 }

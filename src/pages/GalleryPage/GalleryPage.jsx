@@ -21,7 +21,7 @@ function GalleryPage() {
 
   return (
     <div>
-      <h1 className='gallery__header'>Gallery</h1>
+      <h1 className='gallery__header'>A Gallery of Culinary Creations – Yours to Explore</h1>
       <div className="gallery__image-container">
         {platings.length === 0 ? (
           <p>No images saved to the gallery yet.</p>
