@@ -16,10 +16,16 @@ function SingleImage() {
 
   if (!plating) return <p>Loading...</p>;
 
+  const imageUrl = plating.local_image_path 
+      ? `${import.meta.env.VITE_API_URL}${plating.local_image_path.startsWith('/images/') 
+          ? plating.local_image_path 
+          : `/images${plating.local_image_path}`}` 
+      : plating.image_url;  
+
   return (
     <div>
       <h1>Plating {plating.id}</h1>
-      <img src={plating.image_url} alt={`Plating ${plating.id}`} />
+      <img src={imageUrl} alt={`Plating ${plating.id}`} />
       <div>
         <div>Ingredients: {plating.ingredients}</div>
         <div>Garnishes: {plating.garnishes}</div>

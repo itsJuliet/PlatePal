@@ -1,10 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080';
-
 export const fetchPlatings = async () => {
   try {
-    const response = await axios.get(`${API_URL}/api/platings/gallery`);
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/platings/gallery`);
     return response.data.platings; 
   } catch (error) {
     console.error('Error fetching platings:', error);
@@ -13,8 +11,9 @@ export const fetchPlatings = async () => {
 };
 
 export const fetchPlatingById = async (id) => {
+    console.log('Fetching plating with id:', id);
   try {
-    const response = await axios.get(`${API_URL}/api/platings/gallery/${id}`);
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/platings/gallery/${id}`);
     return response.data.plating; 
   } catch (error) {
     console.error(`Error fetching plating with id ${id}:`, error);
@@ -24,7 +23,9 @@ export const fetchPlatingById = async (id) => {
 
 export const createPlating = async (data) => {
     try {
-      const response = await axios.post(`${API_URL}/api/platings/gallery`, data);
+        console.log('Sending data to /api/platings/gallery:', data);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/platings/gallery`, data);
+      console.log('Server response:', response.data);
       return response.data.plating; 
     } catch (error) {
       console.error('Error creating plating:', error);
