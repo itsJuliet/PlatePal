@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { createPlating } from '../../api'; 
+import errorIcon from '../../assets/icons/erroricon.svg'
 import './ImageForm.scss'
 
 function ImageForm() {
@@ -15,7 +16,7 @@ function ImageForm() {
   
     const validateField = (name, value) => {
       if (!value.trim()) {
-        return `${name} is required. Input "none" if not available.`;
+        return `This field is required. Input "none" if not available.`;
       }
       return '';
     };
@@ -68,69 +69,104 @@ function ImageForm() {
         <form onSubmit={handleSubmit} noValidate>
           <div className='form__input-container'>
             <label className='form__label'>Ingredients</label>
-            <input
-              type="text"
-              placeholder="Ingredients"
+            <textarea
+              rows="5"
+              placeholder="Grilled Chicken, Jasmine Rice, Steamed Broccoli"
               value={ingredients}
               onChange={(e) => setIngredients(e.target.value)}
-              className='form__input'
+              className={`form__textarea ${errors.ingredients ? 'form__error-border' : ''}`}
             />
-            {errors.ingredients && <p className="error">{errors.ingredients}</p>}
+            {errors.ingredients && <p className="form__error">
+              <img
+            src={errorIcon}
+            alt="Error Icon"
+            className="form__error-icon"
+            />
+              {errors.ingredients}</p>}
           </div>
   
           <div className='form__input-container'>
             <label className='form__label'>Garnishes</label>
             <input
               type="text"
-              placeholder="Garnishes"
+              placeholder="Parsley, Lemon Zest, Lemons"
               value={garnishes}
               onChange={(e) => setGarnishes(e.target.value)}
-              className='form__input'
+              className={`form__input ${errors.garnishes ? 'form__error-border' : ''}`}
             />
-            {errors.garnishes && <p className="error">{errors.garnishes}</p>}
+            {errors.garnishes && <p className="form__error">
+              <img
+            src={errorIcon}
+            alt="Error Icon"
+            className="form__error-icon"
+            />
+              {errors.garnishes}</p>}
           </div>
   
           <div className='form__input-container'>
             <label className='form__label'>Sauces</label>
             <input
               type="text"
-              placeholder="Sauces"
+              placeholder="Honey Vinaigrette, Chicken Gravy, Soy Sauce"
               value={sauces}
               onChange={(e) => setSauces(e.target.value)}
-              className='form__input'
+              className={`form__input ${errors.garnishes ? 'form__error-border' : ''}`}
             />
-            {errors.sauces && <p className="error">{errors.sauces}</p>}
+            {errors.sauces && <p className="form__error">
+              <img
+            src={errorIcon}
+            alt="Error Icon"
+            className="form__error-icon"
+            />
+              {errors.sauces}</p>}
           </div>
   
           <div className='form__input-container'>
-            <label className='form__label'>Plate Style</label>
+            <label className='form__label'>Plate Type</label>
             <input
               type="text"
-              placeholder="Plate Style"
+              placeholder="White Round Ceramic Plate"
               value={plateStyle}
               onChange={(e) => setPlateStyle(e.target.value)}
-              className='form__input'
+              className={`form__input ${errors.garnishes ? 'form__error-border' : ''}`}
             />
-            {errors.plateStyle && <p className="error">{errors.plateStyle}</p>}
+            {errors.plateStyle && <p className="form__error">
+              <img
+            src={errorIcon}
+            alt="Error Icon"
+            className="form__error-icon"
+            />
+              {errors.plateStyle}</p>}
           </div>
   
           <div className='form__input-container'>
             <label className='form__label'>Plating Style</label>
             <input
               type="text"
-              placeholder="Plating Style"
+              placeholder="Modern, Rustic, Minimalist, Fancy, Simple"
               value={platingStyle}
               onChange={(e) => setPlatingStyle(e.target.value)}
-              className='form__input'
+              className={`form__input ${errors.garnishes ? 'form__error-border' : ''}`}
             />
             {errors.platingStyle && (
-              <p className="error">{errors.platingStyle}</p>
+              <p className="form__error">
+                <img
+            src={errorIcon}
+            alt="Error Icon"
+            className="form__error-icon"
+            />
+                {errors.platingStyle}</p>
             )}
           </div>
-  
-          <button type="submit" disabled={loading}>
+
+          <div className='form__buttons'>
+          <Link to="/" className="form__cancel">
+            Cancel
+          </Link>
+          <button type="submit" disabled={loading} className='form__submit'>
             {loading ? 'Creating...' : 'Submit'}
           </button>
+          </div>
         </form>
       </div>
     );
