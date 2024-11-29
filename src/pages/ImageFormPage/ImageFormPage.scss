@@ -1,7 +1,26 @@
+@use "../../styles/partials/_globals.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .logo {
     height: 8rem;
     width: 8rem;
     position: absolute;
     right: 5rem;
     bottom: -11.25rem;
+    transition: transform 0.3s ease;
 }
+
+.logo:hover {
+    animation: spin 2s linear infinite; 
+  }
