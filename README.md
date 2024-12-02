@@ -1,3 +1,5 @@
+ ![](/src/assets/logos/platepal-logo.png)
+
 # Project Title
 
 PlatePal: AI-Powered Food Plating Designer
