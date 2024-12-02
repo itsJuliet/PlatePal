@@ -2,16 +2,41 @@
 @use "../../styles/partials/_variables.scss" as *;
 @use "../../styles/partials/_mixins.scss" as *;
 
-.image-card {
-    margin: .625rem;
-    border: .0625rem solid #ccc;
-    padding: .625rem;
-    width: 15.625rem;
-    border-radius: .625rem;
-}
 
-img {
-    width: 100%;
-    height: auto;
-    border-radius: .625rem;
+.image-card {
+    position: relative;
+    margin: 0.625rem;
+    padding: 0.5rem;
+    width: 16rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.625rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-0.5rem) scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        background-color: $color-clear; 
+    }
+
+    &__image-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    
+    &__image {
+        width: 100%;
+        height: auto;
+        border-radius: 0.625rem;
+        transition: transform 0.4s ease, filter 0.3s ease;
+
+        &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.1) saturate(1.2);
+        }   
+    }
 }

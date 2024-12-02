@@ -20,6 +20,11 @@
         
     }
 
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
     &__links {
         list-style: none;
         display: flex;

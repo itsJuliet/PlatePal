@@ -8,11 +8,13 @@ function ImageCard({ plating }) {
           : `/images${plating.local_image_path}`}` 
       : plating.image_url;  
   
-    return (
-      <div className="image-card">
-        <img src={imageUrl} alt={`Plating ${plating.id}`} />
-      </div>
-    );
-  }
-
-export default ImageCard;
+      return (
+        <div className="image-card">
+          <div className="image-card__image-container">
+            <img src={imageUrl} alt={`Plating ${plating.id}`} className='image-card__image'/>
+          </div>
+        </div>
+      );
+    }
+    
+    export default ImageCard;

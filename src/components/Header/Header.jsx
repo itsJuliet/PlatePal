@@ -9,7 +9,7 @@ function Header() {
       <nav className='header__nav'>
       <div className="header__logo">
           <Link to="/" className='header__logo-link'>
-            <img src={PlatePalLogo} alt="PlatePal Logo" />
+            <img src={PlatePalLogo} alt="PlatePal Logo" className='header__image'/>
           </Link>
         </div>
         <ul className='header__links'>
