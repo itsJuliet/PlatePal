@@ -6,6 +6,7 @@ import GalleryPage from './pages/GalleryPage/GalleryPage';
 import SingleImagePage from './pages/SingleImagePage/SingleImagePage';
 import Header from './components/Header/Header';
 import ImageGeneratedPage from './pages/ImageGeneratedPage/ImageGeneratedPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import './App.scss'
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/add/:id" element={<ImageGeneratedPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/gallery/:id" element={<SingleImagePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
