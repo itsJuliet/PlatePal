@@ -1,0 +1,17 @@
+@use "../../styles/partials/_globals.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+.image-card {
+    margin: .625rem;
+    border: .0625rem solid #ccc;
+    padding: .625rem;
+    width: 15.625rem;
+    border-radius: .625rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: .625rem;
+}

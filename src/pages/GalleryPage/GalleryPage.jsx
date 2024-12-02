@@ -5,6 +5,10 @@ import ImageCard from '../../components/ImageCard/ImageCard';
 import './GalleryPage.scss'
 
 function GalleryPage() {
+  useEffect(() => {
+    document.title = "Gallery - PlatePal";
+  }, []);
+
   const [platings, setPlatings] = useState([]);
   const location = useLocation(); 
 

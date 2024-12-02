@@ -1,4 +1,5 @@
 import React from 'react';
+import './ImageCard.scss'
 
 function ImageCard({ plating }) {
     const imageUrl = plating.local_image_path 
