@@ -1,5 +1,8 @@
  ![](/src/assets/logos/platepal-logo.png)
 
+ Client: https://github.com/itsJuliet/platepal-client
+ Server: https://github.com/itsJuliet/platepal-server
+
 # Project Title
 
 PlatePal: AI-Powered Food Plating Designer
@@ -104,28 +107,7 @@ Single Image Page:
 
 ### Endpoints
 
-POST/images
- - post the generated image from API
-
-Input:
- ![](public/postinput.png)
-
- Response: 
-![](public/postresponse.png)
-
-GET/images
-- getch a list of all generated images with their metadata
-
-Reponse:
-![](public/getimages.png)
-
-GET/images/:id
-- fetch details of a specific image (by its id)
-along with its metadata.
-
-Response:
-![](public/getimagebyid.png)
-
+Please refer to: https://github.com/itsJuliet/platepal-server README for the API Endpoints.
 
 
 ## Roadmap
