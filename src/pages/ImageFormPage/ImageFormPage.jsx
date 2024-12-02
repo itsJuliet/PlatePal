@@ -9,7 +9,9 @@ function ImageFormPage() {
   }, []);
 
   return (
-    <><div><ImageForm /></div><div><img src={logo} alt="plate pal logo" className="logo"/></div></>
+    <><div><ImageForm /></div>
+    <div><img src={logo} alt="plate pal logo" className="logo"/></div>
+    </>
   )
 }
 

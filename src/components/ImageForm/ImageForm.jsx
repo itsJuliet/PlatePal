@@ -168,8 +168,8 @@ function ImageForm() {
           </button>
           </div>
         </form>
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default ImageForm;
